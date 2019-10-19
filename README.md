@@ -28,7 +28,7 @@ Time spent: 9 hours spent in total
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ### Notes
-Describe any challenges encountered while building the app.
+Challenges encountered while building the app.
 
 I run into issues creating my own custom cell. My app would crash with a "Thread 1 SIGABRT" error after I added the image view, and the cellForRowAt function never gets called. 🙁 Timothy from Codepath helped me resolve the issue through a quick exchange on Slack. Thanks Timothy!
 
