@@ -33,7 +33,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
               // TODO: Get the array of movies
               // TODO: Store the movies in a property to use elsewhere
               // TODO: Reload your table view data
-            print(dataDictionary)
             self.movies = dataDictionary["results"] as! [[String:Any]]
             self.tableView.reloadData()
            }
@@ -71,4 +70,22 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         return cell
        }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        print("Loading up the details screen")
+        
+        // Find the selected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for:cell)!
+        let movie = movies[indexPath.row]
+        
+        // Pass the selected movie to the details view controller
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
