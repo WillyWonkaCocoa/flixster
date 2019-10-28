@@ -128,7 +128,7 @@
         <!--Superhero-->
         <scene sceneID="bsO-KV-v6k">
             <objects>
-                <viewController id="EOK-QD-xMq" sceneMemberID="viewController">
+                <viewController id="EOK-QD-xMq" customClass="MovieGridViewController" customModule="flixster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pMu-TC-L6V" customClass="MovieGrid">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
