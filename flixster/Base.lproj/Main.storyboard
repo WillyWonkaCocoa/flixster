@@ -83,7 +83,7 @@
         <!--Movie Details View Controller-->
         <scene sceneID="X3E-es-1oq">
             <objects>
-                <viewController id="WcK-fU-ofU" customClass="MovieDetailsViewController" customModule="flixster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WcK-fU-ofU" customClass="MovieDetailsViewController" customModule="flixster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3eh-Kl-9DQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fAf-sZ-B2y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1159" y="1535"/>
+            <point key="canvasLocation" x="-434" y="1553"/>
         </scene>
         <!--Superhero-->
         <scene sceneID="bsO-KV-v6k">
@@ -153,14 +153,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ilg-X6-VCB">
-                                                    <rect key="frame" x="8" y="-10" width="104" height="169"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="8" y="-10" width="121" height="188"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="137" height="186"/>
                                         <connections>
                                             <outlet property="posterView" destination="ilg-X6-VCB" id="sGN-lb-Ecf"/>
+                                            <segue destination="WcK-fU-ofU" kind="show" id="wBu-gv-sPU"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -239,4 +240,7 @@
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="byF-VL-5Td"/>
+    </inferredMetricsTieBreakers>
 </document>
